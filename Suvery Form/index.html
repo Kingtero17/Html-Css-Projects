@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<hmtl lang="es">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Formulario de Encuesta</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Formulario de Encuesta</h1>
+            <p id="description">Por favor, complete este formulario con la información requerida.</p>
+        </header>
+        <!-- Aqui empieza la primera sección del formulario-->
+        <form id="survey-form">
+            <fieldset>
+            <label id="name-label" for="name">Ingrese su nombre: <input type="text" id="name" name="name" placeholder="Nombre y Apellido" required></label>
+            <label id="email-label" for="email">Ingrese su Email: <input type="email" id="email" name="email" placeholder="correo@gmail.com" required></label>
+            <label id="number-label" for="number">Ingrese su edad: <input type="number" min="18" max="120" id="number" placeholder="18" required></label>
+            </fieldset>
+
+            <!-- Aqui empieza la segunda sección del formulario-->
+            <!--Selector de opciones-->
+            <fieldset>
+            <label for="dropdown">
+                <select id="dropdown" name="Botón seleccionar">
+                <option value="">Seleccionar Opción</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+                </select>
+            </label>
+
+            <!--Input Checkbox-->
+            <label>
+            <legend>Responde la siguinete pregunta: Te parece que el formulario está bien hecho o mal hecho?</legend></label>
+            <label for="Botón-bien-hecho">Bien<input type="radio" id="Botón-bien-hecho" name="Bien-Mal" value="1" checked></label>
+            <label for="Botón-mal-hecho">Mal<input type="radio" id="Botón-mal-hecho" name="Bien-Mal" value="2"></label>
+            
+            <!--Input Checkbox-->
+            <label for="Opcion1_check">
+                <legend>Qué te hace sentir este formulario?</legend>
+                <input type="checkbox" value="1" id="Opcion1_check" name="Opcion1_check" checked>Alegría
+            </label>
+            <label for="Opcion2_check">
+                <input type="checkbox" value="2" id="Opcion2_check" name="Opcion2_check">Cómodo
+            </label>
+            <label for="Opcion3_check">
+                <input type="checkbox" value="3" id="Opcion3_check" name="Opcion3_check">Normal
+            </label>
+            
+            
+            </fieldset>
+            <label for="comment">
+            <legend>Qué crees que podría mejorar de este formulario?</legend>
+            <textarea id="comment" name="comment" rows="3" cols="30" placeholder="Yo creo..." required/></textarea>
+            </label>
+            <input type="Submit" Value="Enviar" id="submit">
+        </form>
+    </body>
+</html>
